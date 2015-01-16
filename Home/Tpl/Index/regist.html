@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册
+	</title>
+     <link href="../Public/css/main.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/bs/css/bootstrap.min.css">
+	<script src="__PUBLIC__/bs/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/bs/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/bs/js/holder.min.js"></script>
+	<script src="__PUBLIC__/bs/js/application.js"></script>
+</head>
+<body>
+<include file="Model:header"/>
+<div class="main">
+<include file="Model:search"/>
+   <div style="width:100%;background-color:silver;">
+   	<div class="container" style="align:left;">
+		<form action="__URL__/insert" method="post">
+			<table class="table table-bordered">
+				<tr>
+					<div class="form-group">
+						<td><label>用户名</label></td>
+						<td colspan="2"><input type="text" class='form-control' placeholder='请输入用户名' name="username"></td>					
+				    </div>
+				</tr>
+				<tr>
+					<div class="form-group">
+						<td><label>密码</label></td>
+						<td colspan="2"><input type="password" class="form-control" placeholder='密码至少六位' name="password"></td>					
+				    </div>
+				</tr>
+				<tr>
+					<div class="form-group">
+						<td><label>重复密码</label></td>
+						<td colspan="2"><input type="password" class="form-control" placeholder='请再次输入密码' name="repassword"></td>					
+				    </div>
+				</tr>
+				<tr>
+					<div class="form-group">
+						<td><label>手机</label></td>
+						<td colspan="2"><input type="text" class="form-control" placeholder='请输入手机号' name="tel"></td>					
+				    </div>
+				</tr>
+				<tr>
+					<div class="form-group">
+						<td><label>邮箱</label></td>
+						<td colspan="2"><input type="text" class="form-control" placeholder='请输入邮箱' name="email"></td>					
+				    </div>
+				</tr>
+				<tr>
+					<div class="form-group">
+						<td><label>验证码</label></td>
+						<td>
+							<img src="__URL__/verify" onclick='this.src="__URL__/verify?rand="+Math.random()'>  
+						</td>
+						<td>
+                            <input type="text" class="form-control" placeholder='请输入验证码' name="fcode">
+						</td>
+											
+				    </div>
+				</tr>
+				<tr><td colspan="3">
+				<div class="form-group">
+					<input type="submit" value="注册" class='btn btn-primary'>
+					<input type="reset"  value="重置" class='btn btn-danger'>
+				</div>
+			    </td></tr>
+			</table>
+			
+		</form>	
+	</div>
+   <div class="nav"></div>
+  </div>
+</div>  
+	 <include file="Model:footer"/>
+</body>
+</html>

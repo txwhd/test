@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		<volist name="shopinfo" id="shopinfo">
+		<{$shopinfo["name"]}>
+        </volist>
+	</title>
+     <link href="../Public/css/main.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/bs/css/bootstrap.min.css">
+	<script src="__PUBLIC__/bs/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/bs/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/bs/js/holder.min.js"></script>
+	<script src="__PUBLIC__/bs/js/application.js"></script>
+</head>
+<body>
+<include file="Model:header"/>
+<div class="main">
+<include file="Model:search"/>
+	<div class="shop">
+	   <div class="floor">
+	   	  <div class="floor-top">
+	   	  	<div class="s-left">
+				<{$shopinfo['name']}>
+	   	    </div>
+	   	  </div>
+	   </div>
+	   <br/>
+	   <div class="container">
+       <div class="shopimg">
+       	 <img src="__PUBLIC__/uploads/thumb_<{$shopinfo['img']}>" style="width:400px;height:300px;">
+       </div>
+       <div class="shopinfo">
+       	 <span><h4><b><{$shopinfo['name']}></b></h4></span>
+       	 <hr>
+       	 <span>点赞数：<{$shopinfo['totpraise']}></span><br/><br/>
+       	 <span>库存：<{$shopinfo['stock']}></span><br/><br/>
+       	 <span>价格：<{$shopinfo['price']}>元</span><br/><br/>
+       	 <span><a href="__URL__/addcart/shop_id/<{$shopinfo['id']}>"><img src="../Public/images/add.jpg" border="0"></a></span><br/><br/>
+       </div>
+       </div>
+       <div class="container">
+		<ul class='nav nav-tabs'>
+			<li class='active'><a style="display:block;background-color:#DA1F2E;color:white;width:150px;" href="#info" data-toggle='tab'>商品详情</a></li>
+			<li><a style="display:block;background-color:#DA1F2E;color:white;width:150px;" href="#commit" data-toggle='tab'>商品评价</a></li>
+		</ul>	
+        <br/>
+        <br/>
+		<div class='tab-content'>
+			<div id='info' class='tab-pane active fade in' style="text-align:left">
+				<p><{$shopinfo["info"]}></p>	
+			</div>
+			<div id='commit' class='tab-pane fade'>
+				<div class="shopcommit">
+					<if condition="!$rows"> 该商品暂无评论
+		         	<else />	
+					<volist name="rows" id="row">
+		             <div class="shopuc">
+		             <div class="shopcommit-uname"><{$row['uname']}>------</div>
+                  	 <div class="shopcommit-ctime"><{$row['ctime']|date="Y-m-d H:i:s",###}></div><br/>
+                  	 <div class="shopcommit-cinfo"><{$row['cinfo']}></div>
+	                </div>
+	                </volist>
+                    </if>
+			    </div>
+			<{$show}>
+		  </div>
+		</div>
+	</div>
+ </div> 
+   <div class="nav"></div>
+</div>  
+	 <include file="Model:footer"/>
+</body>
+</html>

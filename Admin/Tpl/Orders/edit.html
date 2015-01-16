@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>user</title>
+	<link rel="stylesheet" href="__PUBLIC__/bs/css/bootstrap.min.css">
+	<script src="__PUBLIC__/bs/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/bs/js/bootstrap.min.js"></script>
+	<style>
+		th,td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<a href="" class='btn btn-default'>修改订单状态</a>
+			</div>
+			
+			<div class="panel-body">
+				<form action="__URL__/update" method='post'>
+					<div class="form-group">
+						<label for="">订单状态:</label>
+						<label for="">分类:</label>		
+						<select name="status_id" class='form-control'>
+							<volist name='statuses' id='status'>
+								<if condition='$row[status_id] eq $status[id]'>
+								<option value="<{$status['id']}>" selected><{$status['name']}></option>	
+								<else/>
+
+								<option value="<{$status['id']}>"><{$status['name']}></option>	
+								</if>
+							</volist>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="提交" class='btn btn-primary'>
+						<input type="reset" value="取消" class='btn btn-danger'>
+					</div>
+					<input type="hidden" name="code" value='<{$row[code]}>'>
+				</form>
+			</div>	
+		</div>
+	</div>	
+</body>
+</html>

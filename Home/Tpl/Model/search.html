@@ -1,0 +1,25 @@
+	 <div class="top">
+	 <div class="ads">
+    <br/>
+	 <img src="../Public/images/logo.jpg"/>
+	 </div>
+      <div class="search">
+         <form action="__APP__/Index/search" method="post">
+         <table border="1" class="search-tab">
+          <tr><td width="90%"><input class="search-in" type="text" placeholder='请输入搜索的宝贝名称' name="search"></td>
+          <td><input class="search-sub" type="image" src="../Public/images/search.jpg"></td></tr>
+         </table>
+         </form>
+      </div>
+     </div>
+     <div class="nav"></div>
+     <!--分类导航-->
+     <div class="navgation">
+         <ul class="nav-ul">
+          <li><a href="__APP__/Index/index">首页</a></li>
+          <volist name="ClassRows" id="class">  
+          <li><a href="__APP__/Index/classes/id/<{$class['id']}>"><{$class['name']}></a>
+            </volist>
+         </ul> 
+      </div>
+      <br/>

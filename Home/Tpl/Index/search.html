@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		<volist name="curbrand" id="rows">
+		<{$rows['name']}>
+        </volist> 
+	</title>
+     <link href="../Public/css/main.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/bs/css/bootstrap.min.css">
+	<script src="__PUBLIC__/bs/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/bs/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/bs/js/holder.min.js"></script>
+	<script src="__PUBLIC__/bs/js/application.js"></script>
+  <script>
+      $(function(){
+          $('.subtitle3').click(function(){
+                var ids = $(this).attr("data");
+                var stotpraise=$(this).children().attr("data");
+                var zan = $(this).find(".zhan");
+                $.get("__URL__/totpraise",{
+                      id : ids,              //json数据格式，传入商品id和对应商品点赞数
+                      stotpraise: stotpraise
+                },function(data){
+                      obj=$('.subtitle3')
+                      if(data=='1'){
+                        alert("亲，喜欢的话直接购买吧！");
+                      }else if(data=='0'){
+                        alert("亲，请先登录！");
+                      }else{
+                         zan.html(data);
+                         zan.next().hide();
+                         zan.next().next().fadeIn(1000);
+                      }  
+                });
+            });
+      });
+            
+  </script>
+</head>
+<body>
+<include file="Model:header"/>
+<div class="main">
+<include file="Model:search"/>
+	<div class="shop">
+	   <div class="floor">
+	   	  <div class="floor-top">
+	   	  	<div class="s-left">
+            搜索结果
+	   	    </div>
+	   	  </div>
+	   </div>
+	   <div class="nav1"></div>
+	   <div class="shop-list">
+	   <div class="container">
+	   <div class="row">
+	   <volist name="rst" id="srow">
+			<div class="shopcontainer">
+         <div class="shopcontainer-img">
+         <a href="__URL__/shopes/id/<{$srow['sid']}>" class='thumbnail'>
+          <img src="__PUBLIC__/uploads/thumb_<{$srow['img']}>">
+         </a>
+         </div>
+        <div class="shopcontainer-info">
+         <div class="infoshop">
+         <div class='shopcontainer-price'>￥<{$srow['price']}></div>
+         <div class="subtitle3" data="<{$srow['id']}>">
+                <span data="<{$srow['totpraise']}>">
+                <span class="zhan"><{$srow['totpraise']}>赞</span>
+                <img style="width:20px;height:20px;" src="../Public/images/addfavorite.png" alt="">
+                <img  src="../Public/images/favorite.png" alt="" style="display:none;width:20px;height:20px;">
+                </span>
+               </div>
+               </div>
+               <div class='shopcontainer-name'><{$srow['name']}></div> 
+        </div>
+       </div>
+     </volist>
+        </div>
+    </div>
+   </div>
+   </div>
+   <div class="nav"></div>
+</div>  
+	 <include file="Model:footer"/>
+</body>
+</html>

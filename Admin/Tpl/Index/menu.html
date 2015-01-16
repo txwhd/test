@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<LINK href="../Public/css/admin.css" type="text/css" rel="stylesheet">
+<SCRIPT language=javascript>
+  function expand(el)
+  {
+    childObj = document.getElementById("child" + el);
+
+    if (childObj.style.display == 'none')
+    {
+      childObj.style.display = 'block';
+    }
+    else
+    {
+      childObj.style.display = 'none';
+    }
+    return;
+  }
+</SCRIPT>
+</HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width=170 
+background=../Public/images/menu_bg.jpg border=0>
+  <TR>
+    <TD vAlign=top align=middle>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        
+        <TR>
+          <TD height=10>
+            
+          </TD>
+        </TR>
+      </TABLE>
+            <!-- 用户管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(4) 
+            href="javascript:void(0);">用户管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child4 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/User/index" 
+            target=main>查看用户</A>
+          </TD>
+        </TR>
+
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/User/add" 
+            target=main>添加用户</A>
+          </TD>
+        </TR>
+        
+         <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/User/buikadd" 
+            target=main>批量添加用户</A>
+          </TD>
+        </TR>
+        
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+
+      <!-- 分类管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(5) 
+            href="javascript:void(0);">分类管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child5 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Class/index" 
+            target=main>查看分类</A>
+          </TD>
+        </TR>
+
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Class/add" 
+            target=main>添加分类</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+
+      <!-- 品牌管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(6) 
+            href="javascript:void(0);">品牌管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child6 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Brand/index" 
+            target=main>查看品牌</A>
+          </TD>
+        </TR>
+
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Brand/add" 
+            target=main>添加品牌</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+        <!-- 商品管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(2) 
+            href="javascript:void(0);">商品管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child2 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Shop/index" 
+            target=main>查看商品</A>
+          </TD>
+        </TR>
+
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Shop/add" 
+            target=main>添加商品</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+      <!-- 广告管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(1) 
+            href="javascript:void(0);">广告管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child1 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Adver/index" 
+            target=main>查看广告</A>
+          </TD>
+        </TR>
+
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Adver/add" 
+            target=main>添加广告</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+      <!-- 评论管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(3) 
+            href="javascript:void(0);">评论管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child3 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Commit/index" 
+            target=main>查看评论</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+      <!-- 订单状态管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(7) 
+            href="javascript:void(0);">订单状态管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child7 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Status/index" 
+            target=main>查看订单状态</A>
+          </TD>
+        </TR>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Status/add" 
+            target=main>添加订单状态</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+      <!-- 评论管理 -->
+      <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+        <TR height=22>
+          <TD style="PADDING-LEFT: 30px" background=../Public/images/menu_bt.jpg><A 
+            class=menuParent onclick=expand(8) 
+            href="javascript:void(0);">订单管理</A>
+          </TD>
+        </TR>
+        <TR height=4><TD></TD></TR>
+      </TABLE>
+
+      <TABLE id=child8 style="DISPLAY: none" cellSpacing=0 cellPadding=0 
+      width=150 border=0>
+        <TR height=20>
+          <TD align=middle width=30><IMG height=9 
+            src="../Public/images/menu_icon.gif" width=9>
+          </TD>
+          <TD><A class=menuChild 
+            href="__APP__/Orders/index" 
+            target=main>查看订单</A>
+          </TD>
+        </TR>
+
+        <TR height=4>
+          <TD colSpan=2>
+            
+          </TD>
+        </TR>
+      </TABLE>
+  
+  </TR>
+</TABLE>
+</BODY>
+</HTML>
